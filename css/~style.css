@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  background-color: #555;
+  color: #fff;
+}
+.wrapper {
+ min-height: 100%;
+ height: auto !important;
+ height: 100%;
+ margin: 0 auto -71px; /* the bottom margin is the negative value of the footer's height */
+ overflow: hidden;
+}
+.push {
+ height: 13.333%; /* .push must be the same height as .footer */
+}
+.info p {
+  background-color: tomato;
+  padding: 2.5%;
+  margin: 0;
+}
+.info {
+  display: None;
+}
+
+
+/*************************************
+HEADING
+*************************************/
+header {
+  padding-top: 2.5%;
+  height: 20%;
+  background-color: crimson;
+}
+h1 {
+  /*margin-top: 2%;*/
+  text-align: center;
+  font-size: 2.3em;
+  font-weight: bolder;
+  color: #fff;
+}
+
+
+
+/*************************************
+TIMER
+*************************************/
+#time {
+  height: 20%;
+  border: solid 2px #333;
+  box-shadow: inset 0 0 1em black;
+  background-color: #fff;
+  color: #000;
+  margin: 2.5%;
+  text-align: center;
+  font-size: 6em;
+}
+
+
+
+/*************************************
+CONTROLS
+*************************************/
+#buttons {
+  height: 13.333%;
+  margin: 2.5% 0;
+}
+#start, #stop {
+  margin: 2.5% 6.125%;
+  width: 37.5%;
+  text-align: center;
+  font-size: 2em;
+}
+#start{
+  float: left;
+}
+#stop {
+  float: right;
+  /*clear: left;*/
+}
+
+
+
+/*************************************
+OPTIONS
+*************************************/
+
+#options {
+  border: solid 2px #333;
+  box-shadow: inset 0 0 1em black;
+  background-color: #aaa;
+  color: black;
+  height: 13.333%;
+  width: 95%;
+  margin: 2.5% auto;
+  clear: both;
+}
+#options select {
+  width: 38px;
+}
+#options div:nth-child(2n+1) {
+  margin: 5%;
+  float: left;
+}
+#options div:nth-child(2n) {
+  margin: 5%;
+  float: right;
+}
+
+
+
+/*************************************
+FOOTER
+*************************************/
+
+footer {
+  height: 13.333%;
+  background-color: crimson;
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+
+
+
+@media screen and (min-width: 660px) {
+  .wrapper {
+    /*position: relative;*/
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: #aaa;
+  }
+}
+
+
+
+/*************************************
+CLEARFIX
+*************************************/
+
+.group:after {
+  content: ""
+  display: table;
+  clear: both;
+}
