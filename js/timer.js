@@ -22,8 +22,14 @@ const timer = {
 	},
 
 	toggle: function(mins) {
-		this.seconds = mins * 60;
-		this.countdown = setInterval(this.decrement.bind(timer), 1000);
+		if (!this.isRunning) {
+			this.isRunning = true;
+			this.seconds = mins * 60;
+			this.countdown = setInterval(this.decrement.bind(timer), 1000);
+		} else {
+			clearInterval(this.countdown);
+			this.isRunning = false;
+		}
 	}
 }
 
