@@ -3,7 +3,6 @@
 }
 
 body {
-  /*background-color: rgba(85, 85, 85, 1);*/
   background-color: firebrick;
   color: #000;
   text-align: center;
@@ -25,7 +24,6 @@ header {
   margin-bottom: 0;
   padding-top: 10px;
   min-height: 100px;
-  /*background-color: firebrick;*/
 }
 h1 {
   margin: 0;
@@ -41,19 +39,18 @@ FOOTER
 *************************************/
 
 footer {
-  min-height: 50px;
-  background-color: rgba(85, 85, 85, 1); 
+  margin: 2.5%;
   font-size: 0.75em;
   padding-top: 6px;
 }
 footer p {
   color: white;
-  margin: 0;
+  margin: 5px;
 }
 .social-icon {
   width: 20px;
   height: 20px;
-  margin: 0 5px;
+  margin: 5px;
 }
 
 
@@ -70,8 +67,8 @@ TIMER
 CONTROLS
 *************************************/
 #tomato {
-  display: block;
-  margin: 2.5% auto;
+  /*display: block;*/
+  margin: 0 2.5%;
   width: 95%
 }
 
@@ -86,8 +83,7 @@ OPTIONS
 
 #options {
   /*display: flex;*/
-  clear: both;
-  margin: 0 2.5%;
+  margin: 2.5%;
 }
 #options select {
   margin: 0 15px;
@@ -103,7 +99,7 @@ STATS + INFO
 }
 .info p {
   /*padding: 2.5%; */
-  margin: 0 5%;
+  margin: 0 2.5%;
   color: #000;
 }
 #stats {
@@ -117,15 +113,3 @@ STATS + INFO
   clear: both;
   font-size: 0.9em;
 }
-
-
-
-/*************************************
-CLEARFIX
-*************************************/
-/*
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}*/
