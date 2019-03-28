@@ -1,34 +1,35 @@
-var mins = 25;  //Set the number of minutes you need
-var secs = mins * 60;
-var timerRunning = false;
-let countdown;
-function Decrement() {
-  var currentMinutes = Math.floor(secs / 60);
-  var currentSeconds = secs % 60;
-  if(currentSeconds <= 9) {
-  	currentSeconds = "0" + currentSeconds;
-  }
-  secs--;
-  document.getElementById("time").innerHTML = currentMinutes + ":" + currentSeconds; //Set the element id you need the time put into.
-  if(secs <= 0) {
-  	clearInterval(countdown);
-  }
-}
-function toggleTimer(minutes) {
-	secs = minutes * 60;
-	if (!timerRunning) {
-		timerRunning = true;
-		countdown = setInterval('Decrement()', 1000);
-	} else {
-		timerRunning = false;
-		secs = 0;
+const timer = {
+	seconds: 1500,
+	isRunning: false,
+	countdown: undefined,
+	
+	update: function() {
+	  document.getElementById("time").innerHTML = this.currentMins + ":" + this.currentSecs; //Set the element id you need the time put into.
+	},
+
+	decrement: function() {
+		this.currentSecs = this.seconds % 60;
+		console.log(this.currentSecs);
+		this.currentMins = Math.floor(this.seconds / 60);
+		if (this.currentSecs <= 9) {
+		this.currentSecs = "0" + this.currentSecs;
+		}
+		this.update();
+		this.seconds--;
+		if(this.seconds < 0) {
+			clearInterval(this.countdown);
+		}
+	},
+
+	toggle: function(mins) {
+		this.seconds = mins * 60;
+		this.countdown = setInterval(this.decrement.bind(timer), 1000);
 	}
 }
 
-
-$(document).ready(function() {
+$(document).ready(function(){
 	let $tomato = $(document.getElementById("tomato"));
 	$tomato.click(function() {
-		toggleTimer(25);
+		timer.toggle(25);
 	});
 });
