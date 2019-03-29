@@ -4,7 +4,7 @@ const timer = {
 	countdown: undefined,
 	
 	update() {
-	  document.getElementById("time").innerHTML = this.currentMins + ":" + this.currentSecs; //Set the element id you need the time put into.
+	  $("#time").html(this.currentMins + ":" + this.currentSecs); //Set the element id you need the time put into.
 	},
 
 	decrement() {
@@ -17,7 +17,7 @@ const timer = {
 		this.seconds--;
 		if(this.seconds < 0) {
 			clearInterval(this.countdown);
-			alert("You Just Completed A Pomodoro!");
+			setTimeout("You Just Completed A Pomodoro!");
 		}
 	},
 
@@ -34,9 +34,9 @@ const timer = {
 };
 
 $(document).ready(function(){
-	let $tomato = $(document.getElementById("tomato"));
+	let $tomato = $("#tomato");
 	$tomato.click(function() {
-		let duration = $(document.getElementById("duration")).val();
-		timer.toggle(0.1);
+		let duration = $("#duration").val();
+		timer.toggle(duration);
 	});
 });
