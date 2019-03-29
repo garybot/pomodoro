@@ -89,7 +89,11 @@ OPTIONS
   margin: 0 15px;
 }
 
-
+#options legend {
+  padding: 5px;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
 /*************************************
 STATS + INFO
 *************************************/

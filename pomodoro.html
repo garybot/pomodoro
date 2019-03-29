@@ -21,6 +21,7 @@
   </div>
   <h1 class="bordered" id="time">00:00</h1>
   <fieldset class="bordered" id="options">
+    <legend class="bordered">Set the length of each pomodoro, the short breaks, and long break, as well as the number of pomodoros per set.</legend>
     <label for="duration">Duration</label>
     <select id="duration" name="pomodoro-duration">
       <option value="10">10</option>
@@ -31,18 +32,18 @@
     </select>
     <label for="short-rest">Break</label>
     <select id="short-rest" name="short-rest">
-      <option value="1" selected>5</option>
-      <option value="2">10</option>
-      <option value="3">15</option>
+      <option value="5" selected>5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
     </select>
     <label for="long-rest">Rest</label>
     <select id="long-rest" name="long-rest">
-      <option value="1" selected>15</option>
-      <option value="2">20</option>
-      <option value="3">30</option>
+      <option value="15" selected>15</option>
+      <option value="20">20</option>
+      <option value="30">30</option>
     </select>
-    <label for="pomodoro-set">Set Size</label>
-    <select id="pomodoro-set" name="pomodoro-set">
+    <label for="set-size">Set Size</label>
+    <select id="set-size" name="pomodoro-set">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3" selected>3</option>
